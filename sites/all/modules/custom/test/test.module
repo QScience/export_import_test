@@ -1,0 +1,4 @@
+<?php
+function test_help() {
+  return 'hello world!';
+}
