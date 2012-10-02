@@ -2,5 +2,6 @@
 sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
+# drozas: Adding files and private folder to perform and track the testing
+# sites/*/files
+# sites/*/private
