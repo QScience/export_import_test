@@ -1,0 +1,9902 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  0: color
+  1: field
+  3: menu
+  5: node
+  7: taxonomy
+  9: user
+color:
+  - 
+    modify:
+      tag: color
+      theme: bartik
+      palette: [ ]
+      scheme: default
+  - 
+    modify:
+      tag: color
+      theme: garland
+      palette: [ ]
+      scheme: default
+field:
+  - 
+    modify:
+      tag: field
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 1
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_page
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 2
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: page
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 3
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 4
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Tags
+      description: >
+        Enter a comma-separated list of words to
+        describe your content.
+      widget:
+        type: taxonomy_autocomplete
+        weight: -4
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+        module: taxonomy
+      display:
+        default:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+        teaser:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+      settings:
+        user_register_form: false
+      required: false
+      id: 5
+      field_id: 3
+      field_name: field_tags
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Image
+      description: Upload an image to go with this article.
+      required: false
+      settings:
+        file_directory: field/image
+        file_extensions: png gif jpg jpeg
+        max_filesize:
+        max_resolution:
+        min_resolution:
+        alt_field: true
+        title_field:
+        default_image: 0
+        user_register_form: false
+      widget:
+        type: image_image
+        settings:
+          progress_indicator: throbber
+          preview_image_style: thumbnail
+        weight: -1
+        module: image
+      display:
+        default:
+          label: hidden
+          type: image
+          settings:
+            image_style: large
+            image_link:
+          weight: -1
+          module: image
+        teaser:
+          label: hidden
+          type: image
+          settings:
+            image_style: medium
+            image_link: content
+          weight: -1
+          module: image
+      id: 6
+      field_id: 4
+      field_name: field_image
+      entity_type: node
+      bundle: article
+      deleted: 0
+instance:
+  - 
+    create:
+      tag: instance
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 1
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_page
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 2
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: page
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 3
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 4
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Tags
+      description: >
+        Enter a comma-separated list of words to
+        describe your content.
+      widget:
+        type: taxonomy_autocomplete
+        weight: -4
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+        module: taxonomy
+      display:
+        default:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+        teaser:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+      settings:
+        user_register_form: false
+      required: false
+      id: 5
+      field_id: 3
+      field_name: field_tags
+      entity_type: node
+      bundle: article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Image
+      description: Upload an image to go with this article.
+      required: false
+      settings:
+        file_directory: field/image
+        file_extensions: png gif jpg jpeg
+        max_filesize:
+        max_resolution:
+        min_resolution:
+        alt_field: true
+        title_field:
+        default_image: 0
+        user_register_form: false
+      widget:
+        type: image_image
+        settings:
+          progress_indicator: throbber
+          preview_image_style: thumbnail
+        weight: -1
+        module: image
+      display:
+        default:
+          label: hidden
+          type: image
+          settings:
+            image_style: large
+            image_link:
+          weight: -1
+          module: image
+        teaser:
+          label: hidden
+          type: image
+          settings:
+            image_style: medium
+            image_link: content
+          weight: -1
+          module: image
+      id: 6
+      field_id: 4
+      field_name: field_image
+      entity_type: node
+      bundle: article
+      deleted: 0
+menu:
+  - 
+    create:
+      tag: menu
+      menu_name: main-menu
+      title: Main menu
+      description: 'The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.'
+  - 
+    create:
+      tag: menu
+      menu_name: management
+      title: Management
+      description: 'The <em>Management</em> menu contains links for administrative tasks.'
+  - 
+    create:
+      tag: menu
+      menu_name: navigation
+      title: Navigation
+      description: 'The <em>Navigation</em> menu contains links intended for site visitors. Links are added to the <em>Navigation</em> menu automatically by some modules.'
+  - 
+    create:
+      tag: menu
+      menu_name: user-menu
+      title: User menu
+      description: "The <em>User</em> menu contains links related to the user's account, as well as the 'Log out' link."
+menu_item:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 55
+      plid: 19
+      link_path: admin/reports/status
+      router_path: admin/reports/status
+      link_title: Status report
+      options:
+        attributes:
+          title: "Get a status report about your site's operation and any detected problems."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -60
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 55
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 260
+      plid: 19
+      link_path: admin/reports/updates
+      router_path: admin/reports/updates
+      link_title: Available updates
+      options:
+        attributes:
+          title: >
+            Get a status report about available
+            updates for your installed modules and
+            themes.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -50
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 260
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 22
+      plid: 1
+      link_path: admin/tasks
+      router_path: admin/tasks
+      link_title: Tasks
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -20
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 22
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 48
+      plid: 8
+      link_path: admin/config/people
+      router_path: admin/config/people
+      link_title: People
+      options:
+        attributes:
+          title: Configure user accounts.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -20
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 56
+      plid: 8
+      link_path: admin/config/system
+      router_path: admin/config/system
+      link_title: System
+      options:
+        attributes:
+          title: General system related configuration.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -20
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 112
+      plid: 39
+      link_path: admin/config/development/performance
+      router_path: admin/config/development/performance
+      link_title: Performance
+      options:
+        attributes:
+          title: >
+            Enable or disable page caching for
+            anonymous users and set CSS and JS
+            bandwidth optimization options.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -20
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 39
+      p4: 112
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 116
+      plid: 51
+      link_path: admin/config/regional/settings
+      router_path: admin/config/regional/settings
+      link_title: Regional settings
+      options:
+        attributes:
+          title: "Settings for the site's default time zone and country."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -20
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 116
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 120
+      plid: 56
+      link_path: admin/config/system/site-information
+      router_path: admin/config/system/site-information
+      link_title: Site information
+      options:
+        attributes:
+          title: >
+            Change site name, e-mail address,
+            slogan, default front page, and number
+            of posts per page, error pages.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -20
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 120
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 139
+      plid: 124
+      link_path: admin/structure/taxonomy/%/list
+      router_path: admin/structure/taxonomy/%/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -20
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 139
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 13
+      plid: 1
+      link_path: admin/index
+      router_path: admin/index
+      link_title: Index
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -18
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 13
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 11
+      plid: 1
+      link_path: admin/dashboard
+      router_path: admin/dashboard
+      link_title: Dashboard
+      options:
+        attributes:
+          title: View and customize your dashboard.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -15
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 11
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 35
+      plid: 8
+      link_path: admin/config/content
+      router_path: admin/config/content
+      link_title: Content authoring
+      options:
+        attributes:
+          title: >
+            Settings related to formatting and
+            authoring content.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -15
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 61
+      plid: 8
+      link_path: admin/config/user-interface
+      router_path: admin/config/user-interface
+      link_title: User interface
+      options:
+        attributes:
+          title: Tools that enhance the user interface.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -15
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 98
+      plid: 51
+      link_path: admin/config/regional/date-time
+      router_path: admin/config/regional/date-time
+      link_title: Date and time
+      options:
+        attributes:
+          title: >
+            Configure display formats for date and
+            time.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -15
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 110
+      plid: 39
+      link_path: admin/config/development/logging
+      router_path: admin/config/development/logging
+      link_title: Logging and errors
+      options:
+        attributes:
+          title: "Settings for logging and alerts modules. Various modules can route Drupal's system events to different destinations, such as syslog, database, email, etc."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -15
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 39
+      p4: 110
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: user-menu
+      mlid: 2
+      plid: 0
+      link_path: user
+      router_path: user
+      link_title: User account
+      options:
+        alter: true
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 1
+      customized: 0
+      p1: 2
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 9
+      plid: 1
+      link_path: admin/content
+      router_path: admin/content
+      link_title: Content
+      options:
+        attributes:
+          title: Administer content and comments.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -10
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 9
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 274
+      plid: 270
+      link_path: >
+        admin/structure/taxonomy/%/display/default
+      router_path: >
+        admin/structure/taxonomy/%/display/default
+      link_title: Default
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 270
+      p6: 274
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 275
+      plid: 271
+      link_path: >
+        admin/config/people/accounts/display/default
+      router_path: >
+        admin/config/people/accounts/display/default
+      link_title: Default
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 271
+      p6: 275
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 282
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/default
+      router_path: >
+        admin/structure/types/manage/%/display/default
+      link_title: Default
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 282
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 28
+      plid: 3
+      link_path: comment/%/view
+      router_path: comment/%/view
+      link_title: View comment
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 2
+      customized: 0
+      p1: 3
+      p2: 28
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 34
+      plid: 9
+      link_path: admin/content/node
+      router_path: admin/content/node
+      link_title: Content
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 9
+      p3: 34
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 39
+      plid: 8
+      link_path: admin/config/development
+      router_path: admin/config/development
+      link_title: Development
+      options:
+        attributes:
+          title: Development tools.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 39
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 297
+      plid: 173
+      link_path: >
+        admin/structure/types/manage/%/comment/display/default
+      router_path: >
+        admin/structure/types/manage/%/comment/display/default
+      link_title: Default
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 173
+      p6: 297
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 45
+      plid: 18
+      link_path: admin/people/people
+      router_path: admin/people/people
+      link_title: List
+      options:
+        attributes:
+          title: >
+            Find and manage people interacting with
+            your site.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 45
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 46
+      plid: 8
+      link_path: admin/config/media
+      router_path: admin/config/media
+      link_title: Media
+      options:
+        attributes:
+          title: Media tools.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 53
+      plid: 8
+      link_path: admin/config/search
+      router_path: admin/config/search
+      link_title: Search and metadata
+      options:
+        attributes:
+          title: Local site search, metadata and SEO.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 62
+      plid: 5
+      link_path: node/%/view
+      router_path: node/%/view
+      link_title: View
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 2
+      customized: 0
+      p1: 5
+      p2: 62
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 63
+      plid: 17
+      link_path: user/%/view
+      router_path: user/%/view
+      link_title: View
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 2
+      customized: 0
+      p1: 17
+      p2: 63
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 325
+      plid: 324
+      link_path: admin/macro/settings
+      router_path: admin/macro/settings
+      link_title: Configure
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 324
+      p3: 325
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 337
+      plid: 332
+      link_path: admin/patterns/list
+      router_path: admin/patterns/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 337
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 340
+      plid: 334
+      link_path: admin/patterns/import/source
+      router_path: admin/patterns/import/source
+      link_title: Import Source Code
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 334
+      p4: 340
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 89
+      plid: 48
+      link_path: admin/config/people/accounts
+      router_path: admin/config/people/accounts
+      link_title: Account settings
+      options:
+        attributes:
+          title: >
+            Configure default behavior of users,
+            including registration requirements,
+            e-mails, fields, and user pictures.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 100
+      plid: 46
+      link_path: admin/config/media/file-system
+      router_path: admin/config/media/file-system
+      link_title: File system
+      options:
+        attributes:
+          title: >
+            Tell Drupal where to store uploaded
+            files and how they are accessed.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 100
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 106
+      plid: 36
+      link_path: admin/structure/types/list
+      router_path: admin/structure/types/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 106
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 108
+      plid: 57
+      link_path: admin/structure/taxonomy/list
+      router_path: admin/structure/taxonomy/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 108
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 109
+      plid: 47
+      link_path: admin/structure/menu/list
+      router_path: admin/structure/menu/list
+      link_title: List menus
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 109
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 111
+      plid: 39
+      link_path: admin/config/development/maintenance
+      router_path: admin/config/development/maintenance
+      link_title: Maintenance mode
+      options:
+        attributes:
+          title: >
+            Take the site offline for maintenance or
+            bring it back online.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 39
+      p4: 111
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 114
+      plid: 32
+      link_path: admin/content/comment/new
+      router_path: admin/content/comment/new
+      link_title: Published comments
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 9
+      p3: 32
+      p4: 114
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 131
+      plid: 30
+      link_path: admin/structure/block/list/bartik
+      router_path: admin/structure/block/list/bartik
+      link_title: Bartik
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 131
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 134
+      plid: 124
+      link_path: admin/structure/taxonomy/%/edit
+      router_path: admin/structure/taxonomy/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 134
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 142
+      plid: 89
+      link_path: admin/config/people/accounts/settings
+      router_path: admin/config/people/accounts/settings
+      link_title: Settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 142
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 145
+      plid: 98
+      link_path: admin/config/regional/date-time/types
+      router_path: admin/config/regional/date-time/types
+      link_title: Types
+      options:
+        attributes:
+          title: >
+            Configure display formats for date and
+            time.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -10
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 145
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 152
+      plid: 145
+      link_path: >
+        admin/config/regional/date-time/types/add
+      router_path: >
+        admin/config/regional/date-time/types/add
+      link_title: Add date type
+      options:
+        attributes:
+          title: Add new date type.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 145
+      p6: 152
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 153
+      plid: 136
+      link_path: >
+        admin/config/regional/date-time/formats/add
+      router_path: >
+        admin/config/regional/date-time/formats/add
+      link_title: Add format
+      options:
+        attributes:
+          title: >
+            Allow users to add additional date
+            formats.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 136
+      p6: 153
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 169
+      plid: 133
+      link_path: admin/structure/menu/manage/%/list
+      router_path: admin/structure/menu/manage/%/list
+      link_title: List links
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 133
+      p5: 169
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 188
+      plid: 187
+      link_path: search/node
+      router_path: search/node
+      link_title: Content
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 2
+      customized: 0
+      p1: 187
+      p2: 188
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 200
+      plid: 53
+      link_path: admin/config/search/settings
+      router_path: admin/config/search/settings
+      link_title: Search settings
+      options:
+        attributes:
+          title: >
+            Configure relevance settings for search
+            and other indexing options.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 200
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 207
+      plid: 202
+      link_path: admin/config/search/path/list
+      router_path: admin/config/search/path/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -10
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 202
+      p5: 207
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 136
+      plid: 98
+      link_path: admin/config/regional/date-time/formats
+      router_path: admin/config/regional/date-time/formats
+      link_title: Formats
+      options:
+        attributes:
+          title: >
+            Configure display format strings for
+            date and time.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -9
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 136
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 21
+      plid: 1
+      link_path: admin/structure
+      router_path: admin/structure
+      link_title: Structure
+      options:
+        attributes:
+          title: >
+            Administer blocks, content types, menus,
+            etc.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -8
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 113
+      plid: 49
+      link_path: admin/people/permissions/list
+      router_path: admin/people/permissions/list
+      link_title: Permissions
+      options:
+        attributes:
+          title: >
+            Determine access to features by
+            selecting permissions for roles.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -8
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 49
+      p4: 113
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 7
+      plid: 1
+      link_path: admin/appearance
+      router_path: admin/appearance
+      link_title: Appearance
+      options:
+        attributes:
+          title: Select and configure your themes.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -6
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 51
+      plid: 8
+      link_path: admin/config/regional
+      router_path: admin/config/regional
+      link_title: Regional and language
+      options:
+        attributes:
+          title: >
+            Regional settings, localization and
+            translation.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -5
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 117
+      plid: 49
+      link_path: admin/people/permissions/roles
+      router_path: admin/people/permissions/roles
+      link_title: Roles
+      options:
+        attributes:
+          title: List, edit, or add user roles.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -5
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 49
+      p4: 117
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 202
+      plid: 53
+      link_path: admin/config/search/path
+      router_path: admin/config/search/path
+      link_title: URL aliases
+      options:
+        attributes:
+          title: "Change your site's URL paths by aliasing them."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: -5
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 202
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 18
+      plid: 1
+      link_path: admin/people
+      router_path: admin/people
+      link_title: People
+      options:
+        attributes:
+          title: >
+            Manage user accounts, roles, and
+            permissions.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -4
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 16
+      plid: 1
+      link_path: admin/modules
+      router_path: admin/modules
+      link_title: Modules
+      options:
+        attributes:
+          title: Extend site functionality.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -2
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 141
+      plid: 90
+      link_path: admin/config/system/actions/manage
+      router_path: admin/config/system/actions/manage
+      link_title: Manage actions
+      options:
+        attributes:
+          title: >
+            Manage the actions defined for your
+            site.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 90
+      p5: 141
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 43
+      plid: 7
+      link_path: admin/appearance/list
+      router_path: admin/appearance/list
+      link_title: List
+      options:
+        attributes:
+          title: Select and configure your theme
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -1
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 43
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 50
+      plid: 19
+      link_path: admin/reports/dblog
+      router_path: admin/reports/dblog
+      link_title: Recent log messages
+      options:
+        attributes:
+          title: >
+            View events that have recently been
+            logged.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -1
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 50
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 102
+      plid: 54
+      link_path: admin/appearance/settings/global
+      router_path: admin/appearance/settings/global
+      link_title: Global settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: -1
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 102
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 3
+      plid: 0
+      link_path: comment/%
+      router_path: comment/%
+      link_title: Comment permalink
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 3
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 4
+      plid: 0
+      link_path: filter/tips
+      router_path: filter/tips
+      link_title: Compose tips
+      options: [ ]
+      module: system
+      hidden: 1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 4
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 5
+      plid: 0
+      link_path: node/%
+      router_path: node/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 5
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 6
+      plid: 0
+      link_path: node/add
+      router_path: node/add
+      link_title: Add content
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 6
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 8
+      plid: 1
+      link_path: admin/config
+      router_path: admin/config
+      link_title: Configuration
+      options:
+        attributes:
+          title: Administer settings.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 265
+      plid: 12
+      link_path: admin/help/update
+      router_path: admin/help/update
+      link_title: update
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 265
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: user-menu
+      mlid: 10
+      plid: 2
+      link_path: user/register
+      router_path: user/register
+      link_title: Create new account
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 2
+      p2: 10
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 268
+      plid: 260
+      link_path: admin/reports/updates/list
+      router_path: admin/reports/updates/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 260
+      p4: 268
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: user-menu
+      mlid: 14
+      plid: 2
+      link_path: user/login
+      router_path: user/login
+      link_title: Log in
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 2
+      p2: 14
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 17
+      plid: 0
+      link_path: user/%
+      router_path: user/%
+      link_title: My account
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 17
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: user-menu
+      mlid: 20
+      plid: 2
+      link_path: user/password
+      router_path: user/password
+      link_title: Request new password
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 2
+      p2: 20
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 278
+      plid: 270
+      link_path: admin/structure/taxonomy/%/display/full
+      router_path: admin/structure/taxonomy/%/display/full
+      link_title: Taxonomy term page
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 270
+      p6: 278
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 23
+      plid: 0
+      link_path: comment/reply/%
+      router_path: comment/reply/%
+      link_title: Add new comment
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 23
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 279
+      plid: 271
+      link_path: >
+        admin/config/people/accounts/display/full
+      router_path: >
+        admin/config/people/accounts/display/full
+      link_title: User account
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 271
+      p6: 279
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 280
+      plid: 272
+      link_path: admin/structure/taxonomy/%/fields/%
+      router_path: admin/structure/taxonomy/%/fields/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 280
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 281
+      plid: 273
+      link_path: admin/config/people/accounts/fields/%
+      router_path: admin/config/people/accounts/fields/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 281
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 26
+      plid: 3
+      link_path: comment/%/edit
+      router_path: comment/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 3
+      p2: 26
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 27
+      plid: 0
+      link_path: taxonomy/term/%
+      router_path: taxonomy/term/%
+      link_title: Taxonomy term
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 27
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 283
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/full
+      router_path: >
+        admin/structure/types/manage/%/display/full
+      link_title: Full content
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 283
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 29
+      plid: 18
+      link_path: admin/people/create
+      router_path: admin/people/create
+      link_title: Add user
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 29
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 30
+      plid: 21
+      link_path: admin/structure/block
+      router_path: admin/structure/block
+      link_title: Blocks
+      options:
+        attributes:
+          title: "Configure what block content appears in your site's sidebars and other regions."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 31
+      plid: 17
+      link_path: user/%/cancel
+      router_path: user/%/cancel
+      link_title: Cancel account
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 17
+      p2: 31
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 32
+      plid: 9
+      link_path: admin/content/comment
+      router_path: admin/content/comment
+      link_title: Comments
+      options:
+        attributes:
+          title: >
+            List and edit site comments and the
+            comment approval queue.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 9
+      p3: 32
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 288
+      plid: 277
+      link_path: admin/structure/types/manage/%/fields/%
+      router_path: admin/structure/types/manage/%/fields/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 288
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 33
+      plid: 11
+      link_path: admin/dashboard/configure
+      router_path: admin/dashboard/configure
+      link_title: Configure available dashboard blocks
+      options:
+        attributes:
+          title: >
+            Configure which blocks can be shown on
+            the dashboard.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 11
+      p3: 33
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 290
+      plid: 280
+      link_path: admin/structure/taxonomy/%/fields/%/edit
+      router_path: admin/structure/taxonomy/%/fields/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 280
+      p7: 290
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 291
+      plid: 280
+      link_path: >
+        admin/structure/taxonomy/%/fields/%/field-settings
+      router_path: >
+        admin/structure/taxonomy/%/fields/%/field-settings
+      link_title: Field settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 280
+      p7: 291
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 36
+      plid: 21
+      link_path: admin/structure/types
+      router_path: admin/structure/types
+      link_title: Content types
+      options:
+        attributes:
+          title: >
+            Manage content types, including default
+            status, front page promotion, comment
+            settings, etc.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 292
+      plid: 280
+      link_path: >
+        admin/structure/taxonomy/%/fields/%/widget-type
+      router_path: >
+        admin/structure/taxonomy/%/fields/%/widget-type
+      link_title: Widget type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 280
+      p7: 292
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 37
+      plid: 11
+      link_path: admin/dashboard/customize
+      router_path: admin/dashboard/customize
+      link_title: Customize dashboard
+      options:
+        attributes:
+          title: Customize your dashboard.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 11
+      p3: 37
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 294
+      plid: 281
+      link_path: >
+        admin/config/people/accounts/fields/%/edit
+      router_path: >
+        admin/config/people/accounts/fields/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 281
+      p7: 294
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 295
+      plid: 281
+      link_path: >
+        admin/config/people/accounts/fields/%/field-settings
+      router_path: >
+        admin/config/people/accounts/fields/%/field-settings
+      link_title: Field settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 281
+      p7: 295
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 40
+      plid: 17
+      link_path: user/%/edit
+      router_path: user/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 17
+      p2: 40
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 296
+      plid: 281
+      link_path: >
+        admin/config/people/accounts/fields/%/widget-type
+      router_path: >
+        admin/config/people/accounts/fields/%/widget-type
+      link_title: Widget type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 281
+      p7: 296
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 41
+      plid: 5
+      link_path: node/%/edit
+      router_path: node/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 5
+      p2: 41
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 42
+      plid: 19
+      link_path: admin/reports/fields
+      router_path: admin/reports/fields
+      link_title: Field list
+      options:
+        attributes:
+          title: Overview of fields on all entity types.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 42
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 298
+      plid: 173
+      link_path: >
+        admin/structure/types/manage/%/comment/display/full
+      router_path: >
+        admin/structure/types/manage/%/comment/display/full
+      link_title: Full comment
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 173
+      p6: 298
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 44
+      plid: 16
+      link_path: admin/modules/list
+      router_path: admin/modules/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 44
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 300
+      plid: 174
+      link_path: >
+        admin/structure/types/manage/%/comment/fields/%
+      router_path: >
+        admin/structure/types/manage/%/comment/fields/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 300
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 301
+      plid: 288
+      link_path: >
+        admin/structure/types/manage/%/fields/%/edit
+      router_path: >
+        admin/structure/types/manage/%/fields/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 288
+      p7: 301
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 302
+      plid: 288
+      link_path: >
+        admin/structure/types/manage/%/fields/%/field-settings
+      router_path: >
+        admin/structure/types/manage/%/fields/%/field-settings
+      link_title: Field settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 288
+      p7: 302
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 47
+      plid: 21
+      link_path: admin/structure/menu
+      router_path: admin/structure/menu
+      link_title: Menus
+      options:
+        attributes:
+          title: >
+            Add new menus to your site, edit
+            existing menus, and rename and
+            reorganize menu links.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 303
+      plid: 288
+      link_path: >
+        admin/structure/types/manage/%/fields/%/widget-type
+      router_path: >
+        admin/structure/types/manage/%/fields/%/widget-type
+      link_title: Widget type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 288
+      p7: 303
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 49
+      plid: 18
+      link_path: admin/people/permissions
+      router_path: admin/people/permissions
+      link_title: Permissions
+      options:
+        attributes:
+          title: >
+            Determine access to features by
+            selecting permissions for roles.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 49
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 305
+      plid: 300
+      link_path: >
+        admin/structure/types/manage/%/comment/fields/%/edit
+      router_path: >
+        admin/structure/types/manage/%/comment/fields/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 300
+      p7: 305
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 306
+      plid: 300
+      link_path: >
+        admin/structure/types/manage/%/comment/fields/%/field-settings
+      router_path: >
+        admin/structure/types/manage/%/comment/fields/%/field-settings
+      link_title: Field settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 300
+      p7: 306
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 307
+      plid: 300
+      link_path: >
+        admin/structure/types/manage/%/comment/fields/%/widget-type
+      router_path: >
+        admin/structure/types/manage/%/comment/fields/%/widget-type
+      link_title: Widget type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 300
+      p7: 307
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 308
+      plid: 12
+      link_path: admin/help/backup_migrate
+      router_path: admin/help/backup_migrate
+      link_title: backup_migrate
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 308
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 309
+      plid: 56
+      link_path: admin/config/system/backup_migrate
+      router_path: admin/config/system/backup_migrate
+      link_title: Backup and Migrate
+      options:
+        attributes:
+          title: >
+            Backup/restore your database or migrate
+            data to or from another Drupal site.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 310
+      plid: 309
+      link_path: >
+        admin/config/system/backup_migrate/export
+      router_path: >
+        admin/config/system/backup_migrate/export
+      link_title: Backup
+      options:
+        attributes:
+          title: Backup the database.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 310
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 57
+      plid: 21
+      link_path: admin/structure/taxonomy
+      router_path: admin/structure/taxonomy
+      link_title: Taxonomy
+      options:
+        attributes:
+          title: >
+            Manage tagging, categorization, and
+            classification of your content.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 58
+      plid: 19
+      link_path: admin/reports/access-denied
+      router_path: admin/reports/access-denied
+      link_title: "Top 'access denied' errors"
+      options:
+        attributes:
+          title: "View 'access denied' errors (403s)."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 58
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 59
+      plid: 19
+      link_path: admin/reports/page-not-found
+      router_path: admin/reports/page-not-found
+      link_title: "Top 'page not found' errors"
+      options:
+        attributes:
+          title: "View 'page not found' errors (404s)."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 59
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 319
+      plid: 310
+      link_path: >
+        admin/config/system/backup_migrate/export/quick
+      router_path: >
+        admin/config/system/backup_migrate/export/quick
+      link_title: Quick Backup
+      options:
+        attributes:
+          title: Backup the database.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 310
+      p6: 319
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 64
+      plid: 8
+      link_path: admin/config/services
+      router_path: admin/config/services
+      link_title: Web services
+      options:
+        attributes:
+          title: Tools related to web services.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 64
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 66
+      plid: 12
+      link_path: admin/help/block
+      router_path: admin/help/block
+      link_title: block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 66
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 67
+      plid: 12
+      link_path: admin/help/color
+      router_path: admin/help/color
+      link_title: color
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 67
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 323
+      plid: 316
+      link_path: >
+        admin/config/system/backup_migrate/destination/list/files
+      router_path: >
+        admin/config/system/backup_migrate/destination/list/files
+      link_title: Destination Files
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 311
+      p6: 316
+      p7: 323
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 68
+      plid: 12
+      link_path: admin/help/comment
+      router_path: admin/help/comment
+      link_title: comment
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 68
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 324
+      plid: 1
+      link_path: admin/macro
+      router_path: admin/macro
+      link_title: Macro engine
+      options:
+        attributes:
+          title: >
+            Configure the Drupal macro engine.
+            Export recorded macros or import
+            previously recorded macros.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 324
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 69
+      plid: 12
+      link_path: admin/help/contextual
+      router_path: admin/help/contextual
+      link_title: contextual
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 69
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 70
+      plid: 12
+      link_path: admin/help/dashboard
+      router_path: admin/help/dashboard
+      link_title: dashboard
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 70
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 326
+      plid: 12
+      link_path: admin/help/macro
+      router_path: admin/help/macro
+      link_title: macro
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 326
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 71
+      plid: 12
+      link_path: admin/help/dblog
+      router_path: admin/help/dblog
+      link_title: dblog
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 71
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 327
+      plid: 12
+      link_path: admin/help/token
+      router_path: admin/help/token
+      link_title: token
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 327
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 72
+      plid: 12
+      link_path: admin/help/field
+      router_path: admin/help/field
+      link_title: field
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 72
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 73
+      plid: 12
+      link_path: admin/help/field_sql_storage
+      router_path: admin/help/field_sql_storage
+      link_title: field_sql_storage
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 73
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 74
+      plid: 12
+      link_path: admin/help/field_ui
+      router_path: admin/help/field_ui
+      link_title: field_ui
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 74
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 75
+      plid: 12
+      link_path: admin/help/file
+      router_path: admin/help/file
+      link_title: file
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 75
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 76
+      plid: 12
+      link_path: admin/help/filter
+      router_path: admin/help/filter
+      link_title: filter
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 76
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 332
+      plid: 1
+      link_path: admin/patterns
+      router_path: admin/patterns
+      link_title: Patterns
+      options:
+        attributes:
+          title: >
+            Administer patterns available for your
+            site
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 77
+      plid: 12
+      link_path: admin/help/help
+      router_path: admin/help/help
+      link_title: help
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 77
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 333
+      plid: 332
+      link_path: admin/patterns/export
+      router_path: admin/patterns/export
+      link_title: Export
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 333
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 78
+      plid: 12
+      link_path: admin/help/image
+      router_path: admin/help/image
+      link_title: image
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 78
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 334
+      plid: 332
+      link_path: admin/patterns/import
+      router_path: admin/patterns/import
+      link_title: Import
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 334
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 79
+      plid: 12
+      link_path: admin/help/list
+      router_path: admin/help/list
+      link_title: list
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 79
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 80
+      plid: 12
+      link_path: admin/help/menu
+      router_path: admin/help/menu
+      link_title: menu
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 80
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 336
+      plid: 332
+      link_path: admin/patterns/lab
+      router_path: admin/patterns/lab
+      link_title: Lab
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 336
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 81
+      plid: 12
+      link_path: admin/help/node
+      router_path: admin/help/node
+      link_title: node
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 81
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 82
+      plid: 12
+      link_path: admin/help/options
+      router_path: admin/help/options
+      link_title: options
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 82
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 83
+      plid: 12
+      link_path: admin/help/system
+      router_path: admin/help/system
+      link_title: system
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 83
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 339
+      plid: 334
+      link_path: admin/patterns/import/file
+      router_path: admin/patterns/import/file
+      link_title: Import File
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 334
+      p4: 339
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 84
+      plid: 12
+      link_path: admin/help/taxonomy
+      router_path: admin/help/taxonomy
+      link_title: taxonomy
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 84
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 85
+      plid: 12
+      link_path: admin/help/text
+      router_path: admin/help/text
+      link_title: text
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 85
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 341
+      plid: 334
+      link_path: admin/patterns/import/url
+      router_path: admin/patterns/import/url
+      link_title: Import from URL
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 334
+      p4: 341
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 86
+      plid: 12
+      link_path: admin/help/user
+      router_path: admin/help/user
+      link_title: user
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 86
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 88
+      plid: 27
+      link_path: taxonomy/term/%/view
+      router_path: taxonomy/term/%/view
+      link_title: View
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 27
+      p2: 88
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 90
+      plid: 56
+      link_path: admin/config/system/actions
+      router_path: admin/config/system/actions
+      link_title: Actions
+      options:
+        attributes:
+          title: >
+            Manage the actions defined for your
+            site.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 90
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 91
+      plid: 30
+      link_path: admin/structure/block/add
+      router_path: admin/structure/block/add
+      link_title: Add block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 91
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 92
+      plid: 36
+      link_path: admin/structure/types/add
+      router_path: admin/structure/types/add
+      link_title: Add content type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 92
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 93
+      plid: 47
+      link_path: admin/structure/menu/add
+      router_path: admin/structure/menu/add
+      link_title: Add menu
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 93
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 94
+      plid: 57
+      link_path: admin/structure/taxonomy/add
+      router_path: admin/structure/taxonomy/add
+      link_title: Add vocabulary
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 94
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 95
+      plid: 54
+      link_path: admin/appearance/settings/bartik
+      router_path: admin/appearance/settings/bartik
+      link_title: Bartik
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 95
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 99
+      plid: 19
+      link_path: admin/reports/event/%
+      router_path: admin/reports/event/%
+      link_title: Details
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 99
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 101
+      plid: 54
+      link_path: admin/appearance/settings/garland
+      router_path: admin/appearance/settings/garland
+      link_title: Garland
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 101
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 104
+      plid: 46
+      link_path: admin/config/media/image-styles
+      router_path: admin/config/media/image-styles
+      link_title: Image styles
+      options:
+        attributes:
+          title: >
+            Configure styles that can be used for
+            resizing or adjusting images on display.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 107
+      plid: 44
+      link_path: admin/modules/list/confirm
+      router_path: admin/modules/list/confirm
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 44
+      p4: 107
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 115
+      plid: 64
+      link_path: admin/config/services/rss-publishing
+      router_path: admin/config/services/rss-publishing
+      link_title: RSS publishing
+      options:
+        attributes:
+          title: >
+            Configure the site description, the
+            number of items per feed and whether
+            feeds should be
+            titles/teasers/full-text.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 64
+      p4: 115
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 119
+      plid: 54
+      link_path: admin/appearance/settings/seven
+      router_path: admin/appearance/settings/seven
+      link_title: Seven
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 119
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 121
+      plid: 54
+      link_path: admin/appearance/settings/stark
+      router_path: admin/appearance/settings/stark
+      link_title: Stark
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 121
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 122
+      plid: 35
+      link_path: admin/config/content/formats
+      router_path: admin/config/content/formats
+      link_title: Text formats
+      options:
+        attributes:
+          title: >
+            Configure how content input by users is
+            filtered, including allowed HTML tags.
+            Also allows enabling of module-provided
+            filters.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 122
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 123
+      plid: 60
+      link_path: admin/modules/uninstall/confirm
+      router_path: admin/modules/uninstall/confirm
+      link_title: Uninstall
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 60
+      p4: 123
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 124
+      plid: 57
+      link_path: admin/structure/taxonomy/%
+      router_path: admin/structure/taxonomy/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 125
+      plid: 32
+      link_path: admin/content/comment/approval
+      router_path: admin/content/comment/approval
+      link_title: Unapproved comments
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 9
+      p3: 32
+      p4: 125
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 126
+      plid: 40
+      link_path: user/%/edit/account
+      router_path: user/%/edit/account
+      link_title: Account
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 17
+      p2: 40
+      p3: 126
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 127
+      plid: 122
+      link_path: admin/config/content/formats/%
+      router_path: admin/config/content/formats/%
+      link_title: 'null'
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 122
+      p5: 127
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 129
+      plid: 124
+      link_path: admin/structure/taxonomy/%/add
+      router_path: admin/structure/taxonomy/%/add
+      link_title: Add term
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 129
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 132
+      plid: 90
+      link_path: admin/config/system/actions/configure
+      router_path: admin/config/system/actions/configure
+      link_title: Configure an advanced action
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 90
+      p5: 132
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 133
+      plid: 47
+      link_path: admin/structure/menu/manage/%
+      router_path: admin/structure/menu/manage/%
+      link_title: Customize menu
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 133
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 135
+      plid: 36
+      link_path: admin/structure/types/manage/%
+      router_path: admin/structure/types/manage/%
+      link_title: Edit content type
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 137
+      plid: 30
+      link_path: admin/structure/block/list/garland
+      router_path: admin/structure/block/list/garland
+      link_title: Garland
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 137
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 138
+      plid: 122
+      link_path: admin/config/content/formats/list
+      router_path: admin/config/content/formats/list
+      link_title: List
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 122
+      p5: 138
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 143
+      plid: 30
+      link_path: admin/structure/block/list/seven
+      router_path: admin/structure/block/list/seven
+      link_title: Seven
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 143
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 144
+      plid: 30
+      link_path: admin/structure/block/list/stark
+      router_path: admin/structure/block/list/stark
+      link_title: Stark
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 144
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 146
+      plid: 52
+      link_path: node/%/revisions/%/delete
+      router_path: node/%/revisions/%/delete
+      link_title: Delete earlier revision
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 5
+      p2: 52
+      p3: 146
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 147
+      plid: 52
+      link_path: node/%/revisions/%/revert
+      router_path: node/%/revisions/%/revert
+      link_title: Revert to earlier revision
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 5
+      p2: 52
+      p3: 147
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 148
+      plid: 52
+      link_path: node/%/revisions/%/view
+      router_path: node/%/revisions/%/view
+      link_title: Revisions
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 5
+      p2: 52
+      p3: 148
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 149
+      plid: 137
+      link_path: admin/structure/block/list/garland/add
+      router_path: admin/structure/block/list/garland/add
+      link_title: Add block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 137
+      p5: 149
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 150
+      plid: 143
+      link_path: admin/structure/block/list/seven/add
+      router_path: admin/structure/block/list/seven/add
+      link_title: Add block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 143
+      p5: 150
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 151
+      plid: 144
+      link_path: admin/structure/block/list/stark/add
+      router_path: admin/structure/block/list/stark/add
+      link_title: Add block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 144
+      p5: 151
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 154
+      plid: 133
+      link_path: admin/structure/menu/manage/%/add
+      router_path: admin/structure/menu/manage/%/add
+      link_title: Add link
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 133
+      p5: 154
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 155
+      plid: 30
+      link_path: admin/structure/block/manage/%/%
+      router_path: admin/structure/block/manage/%/%
+      link_title: Configure block
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 155
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 156
+      plid: 31
+      link_path: user/%/cancel/confirm/%/%
+      router_path: user/%/cancel/confirm/%/%
+      link_title: Confirm account cancellation
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 17
+      p2: 31
+      p3: 156
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 157
+      plid: 135
+      link_path: admin/structure/types/manage/%/delete
+      router_path: admin/structure/types/manage/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 157
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 158
+      plid: 103
+      link_path: admin/config/people/ip-blocking/delete/%
+      router_path: admin/config/people/ip-blocking/delete/%
+      link_title: Delete IP address
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 103
+      p5: 158
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 159
+      plid: 90
+      link_path: admin/config/system/actions/delete/%
+      router_path: admin/config/system/actions/delete/%
+      link_title: Delete action
+      options:
+        attributes:
+          title: Delete an action.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 90
+      p5: 159
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 160
+      plid: 133
+      link_path: admin/structure/menu/manage/%/delete
+      router_path: admin/structure/menu/manage/%/delete
+      link_title: Delete menu
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 133
+      p5: 160
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 161
+      plid: 47
+      link_path: admin/structure/menu/item/%/delete
+      router_path: admin/structure/menu/item/%/delete
+      link_title: Delete menu link
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 161
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 162
+      plid: 117
+      link_path: admin/people/permissions/roles/delete/%
+      router_path: admin/people/permissions/roles/delete/%
+      link_title: Delete role
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 49
+      p4: 117
+      p5: 162
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 163
+      plid: 127
+      link_path: admin/config/content/formats/%/disable
+      router_path: admin/config/content/formats/%/disable
+      link_title: Disable text format
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 122
+      p5: 127
+      p6: 163
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 164
+      plid: 135
+      link_path: admin/structure/types/manage/%/edit
+      router_path: admin/structure/types/manage/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 164
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 165
+      plid: 133
+      link_path: admin/structure/menu/manage/%/edit
+      router_path: admin/structure/menu/manage/%/edit
+      link_title: Edit menu
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 133
+      p5: 165
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 166
+      plid: 47
+      link_path: admin/structure/menu/item/%/edit
+      router_path: admin/structure/menu/item/%/edit
+      link_title: Edit menu link
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 166
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 167
+      plid: 117
+      link_path: admin/people/permissions/roles/edit/%
+      router_path: admin/people/permissions/roles/edit/%
+      link_title: Edit role
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 18
+      p3: 49
+      p4: 117
+      p5: 167
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 168
+      plid: 104
+      link_path: admin/config/media/image-styles/edit/%
+      router_path: admin/config/media/image-styles/edit/%
+      link_title: Edit style
+      options:
+        attributes:
+          title: Configure an image style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 168
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 170
+      plid: 47
+      link_path: admin/structure/menu/item/%/reset
+      router_path: admin/structure/menu/item/%/reset
+      link_title: Reset menu link
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 170
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 171
+      plid: 104
+      link_path: admin/config/media/image-styles/delete/%
+      router_path: admin/config/media/image-styles/delete/%
+      link_title: Delete style
+      options:
+        attributes:
+          title: Delete an image style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 171
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 172
+      plid: 104
+      link_path: admin/config/media/image-styles/revert/%
+      router_path: admin/config/media/image-styles/revert/%
+      link_title: Revert style
+      options:
+        attributes:
+          title: Revert an image style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 172
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 175
+      plid: 155
+      link_path: >
+        admin/structure/block/manage/%/%/configure
+      router_path: >
+        admin/structure/block/manage/%/%/configure
+      link_title: Configure block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 155
+      p5: 175
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 176
+      plid: 155
+      link_path: admin/structure/block/manage/%/%/delete
+      router_path: admin/structure/block/manage/%/%/delete
+      link_title: Delete block
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 30
+      p4: 155
+      p5: 176
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 177
+      plid: 136
+      link_path: >
+        admin/config/regional/date-time/formats/%/delete
+      router_path: >
+        admin/config/regional/date-time/formats/%/delete
+      link_title: Delete date format
+      options:
+        attributes:
+          title: >
+            Allow users to delete a configured date
+            format.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 136
+      p6: 177
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 178
+      plid: 145
+      link_path: >
+        admin/config/regional/date-time/types/%/delete
+      router_path: >
+        admin/config/regional/date-time/types/%/delete
+      link_title: Delete date type
+      options:
+        attributes:
+          title: >
+            Allow users to delete a configured date
+            type.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 145
+      p6: 178
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 179
+      plid: 136
+      link_path: >
+        admin/config/regional/date-time/formats/%/edit
+      router_path: >
+        admin/config/regional/date-time/formats/%/edit
+      link_title: Edit date format
+      options:
+        attributes:
+          title: >
+            Allow users to edit a configured date
+            format.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 51
+      p4: 98
+      p5: 136
+      p6: 179
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 180
+      plid: 168
+      link_path: >
+        admin/config/media/image-styles/edit/%/add/%
+      router_path: >
+        admin/config/media/image-styles/edit/%/add/%
+      link_title: Add image effect
+      options:
+        attributes:
+          title: Add a new effect to a style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 168
+      p6: 180
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 181
+      plid: 168
+      link_path: >
+        admin/config/media/image-styles/edit/%/effects/%
+      router_path: >
+        admin/config/media/image-styles/edit/%/effects/%
+      link_title: Edit image effect
+      options:
+        attributes:
+          title: Edit an existing effect within a style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 168
+      p6: 181
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 182
+      plid: 181
+      link_path: >
+        admin/config/media/image-styles/edit/%/effects/%/delete
+      router_path: >
+        admin/config/media/image-styles/edit/%/effects/%/delete
+      link_title: Delete image effect
+      options:
+        attributes:
+          title: Delete an existing effect from a style.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 168
+      p6: 181
+      p7: 182
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 183
+      plid: 47
+      link_path: admin/structure/menu/manage/main-menu
+      router_path: admin/structure/menu/manage/%
+      link_title: Main menu
+      options: [ ]
+      module: menu
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 183
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 184
+      plid: 47
+      link_path: admin/structure/menu/manage/management
+      router_path: admin/structure/menu/manage/%
+      link_title: Management
+      options: [ ]
+      module: menu
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 184
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 185
+      plid: 47
+      link_path: admin/structure/menu/manage/navigation
+      router_path: admin/structure/menu/manage/%
+      link_title: Navigation
+      options: [ ]
+      module: menu
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 185
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 186
+      plid: 47
+      link_path: admin/structure/menu/manage/user-menu
+      router_path: admin/structure/menu/manage/%
+      link_title: User menu
+      options: [ ]
+      module: menu
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 186
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 187
+      plid: 0
+      link_path: search
+      router_path: search
+      link_title: Search
+      options: [ ]
+      module: system
+      hidden: 1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 187
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 189
+      plid: 187
+      link_path: search/user
+      router_path: search/user
+      link_title: Users
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 187
+      p2: 189
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 190
+      plid: 188
+      link_path: search/node/%
+      router_path: search/node/%
+      link_title: Content
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 187
+      p2: 188
+      p3: 190
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 191
+      plid: 17
+      link_path: user/%/shortcuts
+      router_path: user/%/shortcuts
+      link_title: Shortcuts
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 17
+      p2: 191
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 192
+      plid: 19
+      link_path: admin/reports/search
+      router_path: admin/reports/search
+      link_title: Top search phrases
+      options:
+        attributes:
+          title: View most popular search phrases.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 192
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 193
+      plid: 189
+      link_path: search/user/%
+      router_path: search/user/%
+      link_title: Users
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 187
+      p2: 189
+      p3: 193
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 194
+      plid: 12
+      link_path: admin/help/number
+      router_path: admin/help/number
+      link_title: number
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 194
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 195
+      plid: 12
+      link_path: admin/help/overlay
+      router_path: admin/help/overlay
+      link_title: overlay
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 195
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 196
+      plid: 12
+      link_path: admin/help/path
+      router_path: admin/help/path
+      link_title: path
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 196
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 197
+      plid: 12
+      link_path: admin/help/rdf
+      router_path: admin/help/rdf
+      link_title: rdf
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 197
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 198
+      plid: 12
+      link_path: admin/help/search
+      router_path: admin/help/search
+      link_title: search
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 198
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 199
+      plid: 12
+      link_path: admin/help/shortcut
+      router_path: admin/help/shortcut
+      link_title: shortcut
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 199
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 201
+      plid: 61
+      link_path: admin/config/user-interface/shortcut
+      router_path: admin/config/user-interface/shortcut
+      link_title: Shortcuts
+      options:
+        attributes:
+          title: Add and modify shortcut sets.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 203
+      plid: 202
+      link_path: admin/config/search/path/add
+      router_path: admin/config/search/path/add
+      link_title: Add alias
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 202
+      p5: 203
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 204
+      plid: 201
+      link_path: >
+        admin/config/user-interface/shortcut/add-set
+      router_path: >
+        admin/config/user-interface/shortcut/add-set
+      link_title: Add shortcut set
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 204
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 205
+      plid: 200
+      link_path: admin/config/search/settings/reindex
+      router_path: admin/config/search/settings/reindex
+      link_title: Clear index
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 200
+      p5: 205
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 206
+      plid: 201
+      link_path: admin/config/user-interface/shortcut/%
+      router_path: admin/config/user-interface/shortcut/%
+      link_title: Edit shortcuts
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 206
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 208
+      plid: 206
+      link_path: >
+        admin/config/user-interface/shortcut/%/add-link
+      router_path: >
+        admin/config/user-interface/shortcut/%/add-link
+      link_title: Add shortcut
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 206
+      p6: 208
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 209
+      plid: 202
+      link_path: admin/config/search/path/delete/%
+      router_path: admin/config/search/path/delete/%
+      link_title: Delete alias
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 202
+      p5: 209
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 210
+      plid: 206
+      link_path: >
+        admin/config/user-interface/shortcut/%/delete
+      router_path: >
+        admin/config/user-interface/shortcut/%/delete
+      link_title: Delete shortcut set
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 206
+      p6: 210
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 211
+      plid: 202
+      link_path: admin/config/search/path/edit/%
+      router_path: admin/config/search/path/edit/%
+      link_title: Edit alias
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 202
+      p5: 211
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 213
+      plid: 201
+      link_path: >
+        admin/config/user-interface/shortcut/link/%
+      router_path: >
+        admin/config/user-interface/shortcut/link/%
+      link_title: Edit shortcut
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 0
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 213
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 214
+      plid: 206
+      link_path: >
+        admin/config/user-interface/shortcut/%/links
+      router_path: >
+        admin/config/user-interface/shortcut/%/links
+      link_title: List links
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 206
+      p6: 214
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 215
+      plid: 213
+      link_path: >
+        admin/config/user-interface/shortcut/link/%/delete
+      router_path: >
+        admin/config/user-interface/shortcut/link/%/delete
+      link_title: Delete shortcut
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 213
+      p6: 215
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: main-menu
+      mlid: 218
+      plid: 0
+      link_path: '<front>'
+      router_path:
+      link_title: Home
+      options: [ ]
+      module: menu
+      hidden: 0
+      external: 1
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 1
+      customized: 0
+      p1: 218
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 219
+      plid: 6
+      link_path: node/add/article
+      router_path: node/add/article
+      link_title: Article
+      options:
+        attributes:
+          title: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 6
+      p2: 219
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 220
+      plid: 6
+      link_path: node/add/page
+      router_path: node/add/page
+      link_title: Basic page
+      options:
+        attributes:
+          title: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 2
+      customized: 0
+      p1: 6
+      p2: 220
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 221
+      plid: 12
+      link_path: admin/help/toolbar
+      router_path: admin/help/toolbar
+      link_title: toolbar
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 0
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 221
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 272
+      plid: 124
+      link_path: admin/structure/taxonomy/%/fields
+      router_path: admin/structure/taxonomy/%/fields
+      link_title: Manage fields
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 273
+      plid: 89
+      link_path: admin/config/people/accounts/fields
+      router_path: admin/config/people/accounts/fields
+      link_title: Manage fields
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 277
+      plid: 135
+      link_path: admin/structure/types/manage/%/fields
+      router_path: admin/structure/types/manage/%/fields
+      link_title: Manage fields
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 24
+      plid: 3
+      link_path: comment/%/approve
+      router_path: comment/%/approve
+      link_title: Approve
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 2
+      customized: 0
+      p1: 3
+      p2: 24
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 287
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/teaser
+      router_path: >
+        admin/structure/types/manage/%/display/teaser
+      link_title: Teaser
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 287
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 38
+      plid: 5
+      link_path: node/%/delete
+      router_path: node/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 2
+      customized: 0
+      p1: 5
+      p2: 38
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 313
+      plid: 309
+      link_path: >
+        admin/config/system/backup_migrate/restore
+      router_path: >
+        admin/config/system/backup_migrate/restore
+      link_title: Restore
+      options:
+        attributes:
+          title: >
+            Restore the database from a previous
+            backup
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 313
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 315
+      plid: 310
+      link_path: >
+        admin/config/system/backup_migrate/export/advanced
+      router_path: >
+        admin/config/system/backup_migrate/export/advanced
+      link_title: Advanced Backup
+      options:
+        attributes:
+          title: Backup the database.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 310
+      p6: 315
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 316
+      plid: 311
+      link_path: >
+        admin/config/system/backup_migrate/destination/list
+      router_path: >
+        admin/config/system/backup_migrate/destination/list
+      link_title: List !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 311
+      p6: 316
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 317
+      plid: 312
+      link_path: >
+        admin/config/system/backup_migrate/profile/list
+      router_path: >
+        admin/config/system/backup_migrate/profile/list
+      link_title: List !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 312
+      p6: 317
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 318
+      plid: 314
+      link_path: >
+        admin/config/system/backup_migrate/schedule/list
+      router_path: >
+        admin/config/system/backup_migrate/schedule/list
+      link_title: List !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 314
+      p6: 318
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 328
+      plid: 270
+      link_path: admin/structure/taxonomy/%/display/token
+      router_path: admin/structure/taxonomy/%/display/token
+      link_title: Tokens
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 270
+      p6: 328
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 329
+      plid: 271
+      link_path: >
+        admin/config/people/accounts/display/token
+      router_path: >
+        admin/config/people/accounts/display/token
+      link_title: Tokens
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 271
+      p6: 329
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 331
+      plid: 173
+      link_path: >
+        admin/structure/types/manage/%/comment/display/token
+      router_path: >
+        admin/structure/types/manage/%/comment/display/token
+      link_title: Tokens
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 173
+      p6: 331
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 130
+      plid: 122
+      link_path: admin/config/content/formats/add
+      router_path: admin/config/content/formats/add
+      link_title: Add text format
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 35
+      p4: 122
+      p5: 130
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 140
+      plid: 104
+      link_path: admin/config/media/image-styles/list
+      router_path: admin/config/media/image-styles/list
+      link_title: List
+      options:
+        attributes:
+          title: >
+            List the current image styles on the
+            site.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 1
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 140
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 270
+      plid: 124
+      link_path: admin/structure/taxonomy/%/display
+      router_path: admin/structure/taxonomy/%/display
+      link_title: Manage display
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 270
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 271
+      plid: 89
+      link_path: admin/config/people/accounts/display
+      router_path: admin/config/people/accounts/display
+      link_title: Manage display
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 271
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 276
+      plid: 135
+      link_path: admin/structure/types/manage/%/display
+      router_path: admin/structure/types/manage/%/display
+      link_title: Manage display
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 25
+      plid: 3
+      link_path: comment/%/delete
+      router_path: comment/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 2
+      customized: 0
+      p1: 3
+      p2: 25
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 284
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/rss
+      router_path: >
+        admin/structure/types/manage/%/display/rss
+      link_title: RSS
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 284
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 52
+      plid: 5
+      link_path: node/%/revisions
+      router_path: node/%/revisions
+      link_title: Revisions
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 2
+      depth: 2
+      customized: 0
+      p1: 5
+      p2: 52
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 311
+      plid: 309
+      link_path: >
+        admin/config/system/backup_migrate/destination
+      router_path: >
+        admin/config/system/backup_migrate/destination
+      link_title: Destinations
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 311
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 312
+      plid: 309
+      link_path: >
+        admin/config/system/backup_migrate/profile
+      router_path: >
+        admin/config/system/backup_migrate/profile
+      link_title: Profiles
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 312
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 314
+      plid: 309
+      link_path: >
+        admin/config/system/backup_migrate/schedule
+      router_path: >
+        admin/config/system/backup_migrate/schedule
+      link_title: Schedules
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 314
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 320
+      plid: 316
+      link_path: >
+        admin/config/system/backup_migrate/destination/list/add
+      router_path: >
+        admin/config/system/backup_migrate/destination/list/add
+      link_title: Add !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 311
+      p6: 316
+      p7: 320
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 321
+      plid: 317
+      link_path: >
+        admin/config/system/backup_migrate/profile/list/add
+      router_path: >
+        admin/config/system/backup_migrate/profile/list/add
+      link_title: Add !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 312
+      p6: 317
+      p7: 321
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 322
+      plid: 318
+      link_path: >
+        admin/config/system/backup_migrate/schedule/list/add
+      router_path: >
+        admin/config/system/backup_migrate/schedule/list/add
+      link_title: Add !type
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 309
+      p5: 314
+      p6: 318
+      p7: 322
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 128
+      plid: 104
+      link_path: admin/config/media/image-styles/add
+      router_path: admin/config/media/image-styles/add
+      link_title: Add style
+      options:
+        attributes:
+          title: Add a new image style.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 2
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 104
+      p5: 128
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 285
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/search_index
+      router_path: >
+        admin/structure/types/manage/%/display/search_index
+      link_title: Search index
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 3
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 285
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 174
+      plid: 135
+      link_path: >
+        admin/structure/types/manage/%/comment/fields
+      router_path: >
+        admin/structure/types/manage/%/comment/fields
+      link_title: Comment fields
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 3
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 286
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/search_result
+      router_path: >
+        admin/structure/types/manage/%/display/search_result
+      link_title: Search result
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 4
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 286
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 173
+      plid: 135
+      link_path: >
+        admin/structure/types/manage/%/comment/display
+      router_path: >
+        admin/structure/types/manage/%/comment/display
+      link_title: Comment display
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 4
+      depth: 5
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 173
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 19
+      plid: 1
+      link_path: admin/reports
+      router_path: admin/reports
+      link_title: Reports
+      options:
+        attributes:
+          title: View reports, updates, and errors.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 5
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 65
+      plid: 8
+      link_path: admin/config/workflow
+      router_path: admin/config/workflow
+      link_title: Workflow
+      options:
+        attributes:
+          title: >
+            Content workflow, editorial workflow
+            tools.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 5
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 65
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 330
+      plid: 276
+      link_path: >
+        admin/structure/types/manage/%/display/token
+      router_path: >
+        admin/structure/types/manage/%/display/token
+      link_title: Tokens
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 5
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 276
+      p6: 330
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 96
+      plid: 53
+      link_path: admin/config/search/clean-urls
+      router_path: admin/config/search/clean-urls
+      link_title: Clean URLs
+      options:
+        attributes:
+          title: >
+            Enable or disable clean URLs for your
+            site.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 5
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 53
+      p4: 96
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 118
+      plid: 47
+      link_path: admin/structure/menu/settings
+      router_path: admin/structure/menu/settings
+      link_title: Settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 5
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 47
+      p4: 118
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 1
+      plid: 0
+      link_path: admin
+      router_path: admin
+      link_title: Administration
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 9
+      depth: 1
+      customized: 0
+      p1: 1
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 12
+      plid: 1
+      link_path: admin/help
+      router_path: admin/help
+      link_title: Help
+      options:
+        attributes:
+          title: >
+            Reference for usage, configuration, and
+            modules.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 9
+      depth: 2
+      customized: 0
+      p1: 1
+      p2: 12
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 262
+      plid: 16
+      link_path: admin/modules/update
+      router_path: admin/modules/update
+      link_title: Update
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 262
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 264
+      plid: 7
+      link_path: admin/appearance/update
+      router_path: admin/appearance/update
+      link_title: Update
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 264
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 267
+      plid: 260
+      link_path: admin/reports/updates/update
+      router_path: admin/reports/updates/update
+      link_title: Update
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 260
+      p4: 267
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: user-menu
+      mlid: 15
+      plid: 0
+      link_path: user/logout
+      router_path: user/logout
+      link_title: Log out
+      options: [ ]
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 1
+      customized: 0
+      p1: 15
+      p2: 0
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 289
+      plid: 280
+      link_path: >
+        admin/structure/taxonomy/%/fields/%/delete
+      router_path: >
+        admin/structure/taxonomy/%/fields/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 57
+      p4: 124
+      p5: 272
+      p6: 280
+      p7: 289
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 293
+      plid: 281
+      link_path: >
+        admin/config/people/accounts/fields/%/delete
+      router_path: >
+        admin/config/people/accounts/fields/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 89
+      p5: 273
+      p6: 281
+      p7: 293
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 299
+      plid: 288
+      link_path: >
+        admin/structure/types/manage/%/fields/%/delete
+      router_path: >
+        admin/structure/types/manage/%/fields/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 277
+      p6: 288
+      p7: 299
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 304
+      plid: 300
+      link_path: >
+        admin/structure/types/manage/%/comment/fields/%/delete
+      router_path: >
+        admin/structure/types/manage/%/comment/fields/%/delete
+      link_title: Delete
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 7
+      customized: 0
+      p1: 1
+      p2: 21
+      p3: 36
+      p4: 135
+      p5: 174
+      p6: 300
+      p7: 304
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 338
+      plid: 332
+      link_path: admin/patterns/settings
+      router_path: admin/patterns/settings
+      link_title: Settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 338
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: navigation
+      mlid: 87
+      plid: 27
+      link_path: taxonomy/term/%/edit
+      router_path: taxonomy/term/%/edit
+      link_title: Edit
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 2
+      customized: 0
+      p1: 27
+      p2: 87
+      p3: 0
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 103
+      plid: 48
+      link_path: admin/config/people/ip-blocking
+      router_path: admin/config/people/ip-blocking
+      link_title: IP address blocking
+      options:
+        attributes:
+          title: Manage blocked IP addresses.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 1
+      expanded: 0
+      weight: 10
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 48
+      p4: 103
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 212
+      plid: 206
+      link_path: >
+        admin/config/user-interface/shortcut/%/edit
+      router_path: >
+        admin/config/user-interface/shortcut/%/edit
+      link_title: Edit set name
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 10
+      depth: 6
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 61
+      p4: 201
+      p5: 206
+      p6: 212
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 335
+      plid: 332
+      link_path: admin/patterns/info
+      router_path: admin/patterns/info
+      link_title: Info
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 15
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 332
+      p3: 335
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 54
+      plid: 7
+      link_path: admin/appearance/settings
+      router_path: admin/appearance/settings
+      link_title: Settings
+      options:
+        attributes:
+          title: >
+            Configure default and theme specific
+            settings.
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 20
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 54
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 60
+      plid: 16
+      link_path: admin/modules/uninstall
+      router_path: admin/modules/uninstall
+      link_title: Uninstall
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 20
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 60
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 97
+      plid: 56
+      link_path: admin/config/system/cron
+      router_path: admin/config/system/cron
+      link_title: Cron
+      options:
+        attributes:
+          title: Manage automatic site maintenance tasks.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 20
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 56
+      p4: 97
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 105
+      plid: 46
+      link_path: admin/config/media/image-toolkit
+      router_path: admin/config/media/image-toolkit
+      link_title: Image toolkit
+      options:
+        attributes:
+          title: >
+            Choose which image toolkit to use if you
+            have installed optional toolkits.
+      module: system
+      hidden: 0
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 20
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 8
+      p3: 46
+      p4: 105
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 261
+      plid: 7
+      link_path: admin/appearance/install
+      router_path: admin/appearance/install
+      link_title: Install new theme
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 25
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 7
+      p3: 261
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 263
+      plid: 16
+      link_path: admin/modules/install
+      router_path: admin/modules/install
+      link_title: Install new module
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 25
+      depth: 3
+      customized: 0
+      p1: 1
+      p2: 16
+      p3: 263
+      p4: 0
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 266
+      plid: 260
+      link_path: admin/reports/updates/install
+      router_path: admin/reports/updates/install
+      link_title: Install new module or theme
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 25
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 260
+      p4: 266
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+  - 
+    create:
+      tag: menu_item
+      menu_name: management
+      mlid: 269
+      plid: 260
+      link_path: admin/reports/updates/settings
+      router_path: admin/reports/updates/settings
+      link_title: Settings
+      options: [ ]
+      module: system
+      hidden: -1
+      external: 0
+      has_children: 0
+      expanded: 0
+      weight: 50
+      depth: 4
+      customized: 0
+      p1: 1
+      p2: 19
+      p3: 260
+      p4: 269
+      p5: 0
+      p6: 0
+      p7: 0
+      p8: 0
+      p9: 0
+      updated: 0
+      href:
+content_type:
+  - 
+    create:
+      tag: content_type
+      type: article
+      name: Article
+      base: node_content
+      module: node
+      description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: article
+      disabled_changed: false
+  - 
+    create:
+      tag: content_type
+      type: page
+      name: Basic page
+      base: node_content
+      module: node
+      description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: page
+      disabled_changed: false
+vocabulary:
+  - 
+    modify:
+      tag: vocabulary
+      name: Tags
+      machine_name: tags
+      old_machine_name: tags
+      description: >
+        Use tags to group articles on similar
+        topics into categories.
+      hierarchy: 0
+      vid: 1
+      module: taxonomy
+  - 
+    modify:
+      tag: vocabulary
+      name: Test Vocabulary 1
+      machine_name: test_vocabulary_1
+      old_machine_name: test_vocabulary_1
+      description: Test Vocabulary 1 Desc
+      hierarchy: 0
+      vid: 2
+      module: taxonomy
+  - 
+    modify:
+      tag: vocabulary
+      name: Test Vocabulary 2
+      machine_name: test_vocabulary_2
+      old_machine_name: test_vocabulary_2
+      description: Test Vocabulary 3
+      hierarchy: 0
+      vid: 3
+      module: taxonomy
+term:
+  - 
+    modify:
+      tag: term
+      name: Term Tag A
+      description:
+        value: Term Tag A
+        format: filtered_html
+      vocabulary_machine_name: tags
+      parent:
+        - 0
+      weight: 0
+      vid: 1
+      tid: 1
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/1
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term Tag B
+      description:
+        value: Term Tag B
+        format: filtered_html
+      vocabulary_machine_name: tags
+      parent:
+        - 0
+      weight: 0
+      vid: 1
+      tid: 2
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/2
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 1.1
+      description:
+        value: Term 1.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_1
+      parent:
+        - 0
+      weight: 0
+      vid: 2
+      tid: 3
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/3
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 1.2
+      description:
+        value: Term 1.2
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_1
+      parent:
+        - 0
+      weight: 0
+      vid: 2
+      tid: 4
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/4
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1
+      description:
+        value: Term 2.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 0
+      weight: 0
+      vid: 3
+      tid: 5
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/5
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1.1
+      description:
+        value: Term 2.1.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 5
+      weight: 0
+      vid: 3
+      tid: 6
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/6
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1.2
+      description:
+        value: Term 2.1.2
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 5
+      weight: 0
+      vid: 3
+      tid: 7
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/7
+        language: und
+role:
+  - 
+    create:
+      tag: role
+      name: authenticated user
+  - 
+    create:
+      tag: role
+      name: administrator
+permission:
+  - 
+    modify:
+      tag: permission
+      rid: 1
+      value:
+        - access comments
+        - access content
+        - use text format filtered_html
+  - 
+    modify:
+      tag: permission
+      rid: 2
+      value:
+        - access comments
+        - access content
+        - post comments
+        - skip comment approval
+        - use text format filtered_html
+  - 
+    modify:
+      tag: permission
+      rid: 3
+      value:
+        - access administration pages
+        - access backup and migrate
+        - access backup files
+        - access comments
+        - access content
+        - access content overview
+        - access contextual links
+        - access dashboard
+        - access overlay
+        - access site in maintenance mode
+        - access site reports
+        - access toolbar
+        - access user profiles
+        - administer actions
+        - administer backup and migrate
+        - administer blocks
+        - administer comments
+        - administer content types
+        - administer filters
+        - administer image styles
+        - administer menu
+        - administer modules
+        - administer nodes
+        - administer patterns
+        - administer permissions
+        - administer search
+        - administer shortcuts
+        - administer site configuration
+        - administer software updates
+        - administer taxonomy
+        - administer themes
+        - administer url aliases
+        - administer users
+        - block IP addresses
+        - bypass node access
+        - cancel account
+        - change own username
+        - create article content
+        - create page content
+        - create url aliases
+        - customize shortcut links
+        - delete any article content
+        - delete any page content
+        - delete backup files
+        - delete own article content
+        - delete own page content
+        - delete revisions
+        - delete terms in 1
+        - edit any article content
+        - edit any page content
+        - edit own article content
+        - edit own comments
+        - edit own page content
+        - edit terms in 1
+        - get patterns
+        - perform backup
+        - post comments
+        - public patterns
+        - restore from backup
+        - revert revisions
+        - search content
+        - select account cancellation method
+        - skip comment approval
+        - switch shortcut sets
+        - use advanced search
+        - use text format filtered_html
+        - use text format full_html
+        - view own unpublished content
+        - view revisions
+        - view the administration theme
