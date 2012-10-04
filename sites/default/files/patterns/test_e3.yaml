@@ -1,0 +1,64 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - node
+content_type:
+  - 
+    create:
+      tag: content_type
+      type: article
+      name: Article
+      base: node_content
+      module: node
+      description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: article
+      disabled_changed: false
+  - 
+    create:
+      tag: content_type
+      type: page
+      name: Basic page
+      base: node_content
+      module: node
+      description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: page
+      disabled_changed: false
+  - 
+    create:
+      tag: content_type
+      type: test_content_type_1
+      name: test_content_type_1
+      base: node_content
+      module: node
+      description: test_content_type_1 desc
+      help: test_content_type_1
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: test_content_type_1
+      disabled_changed: false
