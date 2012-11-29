@@ -1,8 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
-# drozas: Adding settings.php
-#sites/*/settings*.php
+sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-# drozas: Adding files and private folder to perform and track the testing
-# sites/*/files
-# sites/*/private
+sites/*/files
+sites/*/private

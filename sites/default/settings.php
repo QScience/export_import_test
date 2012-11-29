@@ -205,9 +205,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'eiptest',
-      'username' => 'eiptest',
-      'password' => 'eiptest',
+      'database' => 'eiptest2',
+      'username' => 'eiptest2',
+      'password' => 'eiptest2',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
