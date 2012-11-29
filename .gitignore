@@ -1,6 +1,7 @@
+#drozas: Disallow standard Drupal ignore to keep track DB dumps and settings
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+#sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
+#sites/*/files
+#sites/*/private

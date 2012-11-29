@@ -1,0 +1,8 @@
+filename = "eiptest-clean-2012-11-29T11-08-50"
+description = ""
+datestamp = "1354187330"
+generator = "Backup and Migrate (http://drupal.org/project/backup_migrate)"
+generatorversion = "7.x-2.x"
+sites[0][version] = "7.17"
+sites[0][name] = "Export Import Sandbox"
+sites[0][url] = "http://localhost/eiptest2/"
