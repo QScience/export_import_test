@@ -1,0 +1,33 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - color
+color:
+  - 
+    modify:
+      tag: color
+      theme: bartik
+      palette:
+        top: '#bf0713'
+        bottom: '#48e462'
+        bg: '#efecec'
+        sidebar: '#949400'
+        sidebarborders: '#0b156f'
+        footer: '#d86565'
+        titleslogan: '#15066b'
+        text: '#000000'
+        link: '#f443ee'
+  - 
+    modify:
+      tag: color
+      theme: garland
+      palette: [ ]
+      scheme: default
