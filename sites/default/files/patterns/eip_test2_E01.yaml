@@ -1,0 +1,288 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - node
+node:
+  - 
+    create:
+      tag: node
+      vid: 1
+      uid: 1
+      title: Test N1
+      log:
+      status: 1
+      comment: 1
+      promote: 0
+      sticky: 0
+      nid: 1
+      type: page
+      language: und
+      created: 1349345746
+      changed: 1349345746
+      tnid: 0
+      translate: 0
+      revision_timestamp: 1349345746
+      revision_uid: 1
+      body:
+        und:
+          - 
+            value: Test N1
+            summary:
+            format: filtered_html
+            safe_value: |
+              |
+                            <p>Test N1</p>
+            safe_summary:
+      rdf_mapping:
+        rdftype:
+          - foaf:Document
+        title:
+          predicates:
+            - dc:title
+        created:
+          predicates:
+            - dc:date
+            - dc:created
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        changed:
+          predicates:
+            - dc:modified
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        body:
+          predicates:
+            - content:encoded
+        uid:
+          predicates:
+            - sioc:has_creator
+          type: rel
+        name:
+          predicates:
+            - foaf:name
+        comment_count:
+          predicates:
+            - sioc:num_replies
+          datatype: xsd:integer
+        last_activity:
+          predicates:
+            - sioc:last_activity_date
+          datatype: xsd:dateTime
+          callback: date_iso8601
+      cid: 0
+      last_comment_timestamp: 1349345746
+      last_comment_name: null
+      last_comment_uid: 1
+      comment_count: 0
+      name: root
+      picture: 0
+      data: b:0;
+  - 
+    create:
+      tag: node
+      vid: 2
+      uid: 1
+      title: Test N2
+      log:
+      status: 1
+      comment: 1
+      promote: 0
+      sticky: 0
+      nid: 2
+      type: page
+      language: und
+      created: 1349345769
+      changed: 1349345769
+      tnid: 0
+      translate: 0
+      revision_timestamp: 1349345769
+      revision_uid: 1
+      body:
+        und:
+          - 
+            value: Test N2
+            summary:
+            format: filtered_html
+            safe_value: |
+              |
+                            <p>Test N2</p>
+            safe_summary:
+      rdf_mapping:
+        rdftype:
+          - foaf:Document
+        title:
+          predicates:
+            - dc:title
+        created:
+          predicates:
+            - dc:date
+            - dc:created
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        changed:
+          predicates:
+            - dc:modified
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        body:
+          predicates:
+            - content:encoded
+        uid:
+          predicates:
+            - sioc:has_creator
+          type: rel
+        name:
+          predicates:
+            - foaf:name
+        comment_count:
+          predicates:
+            - sioc:num_replies
+          datatype: xsd:integer
+        last_activity:
+          predicates:
+            - sioc:last_activity_date
+          datatype: xsd:dateTime
+          callback: date_iso8601
+      cid: 0
+      last_comment_timestamp: 1349345769
+      last_comment_name: null
+      last_comment_uid: 1
+      comment_count: 0
+      name: root
+      picture: 0
+      data: b:0;
+  - 
+    create:
+      tag: node
+      vid: 3
+      uid: 1
+      title: Test N3
+      log:
+      status: 1
+      comment: 2
+      promote: 1
+      sticky: 0
+      nid: 3
+      type: test_content_type_1
+      language: und
+      created: 1349345833
+      changed: 1349345833
+      tnid: 0
+      translate: 0
+      revision_timestamp: 1349345833
+      revision_uid: 1
+      body:
+        und:
+          - 
+            value: Test N3
+            summary:
+            format: filtered_html
+            safe_value: |
+              |
+                            <p>Test N3</p>
+            safe_summary:
+      rdf_mapping:
+        rdftype:
+          - sioc:Item
+          - foaf:Document
+        title:
+          predicates:
+            - dc:title
+        created:
+          predicates:
+            - dc:date
+            - dc:created
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        changed:
+          predicates:
+            - dc:modified
+          datatype: xsd:dateTime
+          callback: date_iso8601
+        body:
+          predicates:
+            - content:encoded
+        uid:
+          predicates:
+            - sioc:has_creator
+          type: rel
+        name:
+          predicates:
+            - foaf:name
+        comment_count:
+          predicates:
+            - sioc:num_replies
+          datatype: xsd:integer
+        last_activity:
+          predicates:
+            - sioc:last_activity_date
+          datatype: xsd:dateTime
+          callback: date_iso8601
+      cid: 0
+      last_comment_timestamp: 1349345833
+      last_comment_name: null
+      last_comment_uid: 1
+      comment_count: 0
+      name: root
+      picture: 0
+      data: b:0;
+content_type:
+  - 
+    create:
+      tag: content_type
+      type: article
+      name: Article
+      base: node_content
+      module: node
+      description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: article
+      disabled_changed: false
+  - 
+    create:
+      tag: content_type
+      type: page
+      name: Basic page
+      base: node_content
+      module: node
+      description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+      help:
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: page
+      disabled_changed: false
+  - 
+    create:
+      tag: content_type
+      type: test_content_type_1
+      name: test_content_type_1
+      base: node_content
+      module: node
+      description: test_content_type_1 desc
+      help: test_content_type_1
+      has_title: 1
+      title_label: Title
+      custom: 1
+      modified: 1
+      locked: 0
+      disabled: 0
+      orig_type: test_content_type_1
+      disabled_changed: false
