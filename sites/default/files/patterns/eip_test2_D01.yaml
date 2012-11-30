@@ -1,0 +1,642 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - field
+field:
+  - 
+    modify:
+      tag: field
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 1
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_page
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 2
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: page
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 3
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 4
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Tags
+      description: >
+        Enter a comma-separated list of words to
+        describe your content.
+      widget:
+        type: taxonomy_autocomplete
+        weight: -4
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+        module: taxonomy
+      display:
+        default:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+        teaser:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+      settings:
+        user_register_form: false
+      required: false
+      id: 5
+      field_id: 3
+      field_name: field_tags
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Image
+      description: Upload an image to go with this article.
+      required: false
+      settings:
+        file_directory: field/image
+        file_extensions: png gif jpg jpeg
+        max_filesize:
+        max_resolution:
+        min_resolution:
+        alt_field: true
+        title_field:
+        default_image: 0
+        user_register_form: false
+      widget:
+        type: image_image
+        settings:
+          progress_indicator: throbber
+          preview_image_style: thumbnail
+        weight: -1
+        module: image
+      display:
+        default:
+          label: hidden
+          type: image
+          settings:
+            image_style: large
+            image_link:
+          weight: -1
+          module: image
+        teaser:
+          label: hidden
+          type: image
+          settings:
+            image_style: medium
+            image_link: content
+          weight: -1
+          module: image
+      id: 6
+      field_id: 4
+      field_name: field_image
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Test Text Field
+      widget:
+        weight: 0
+        type: text_textfield
+        module: text
+        active: 1
+        settings:
+          size: 60
+      settings:
+        text_processing: 0
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 11
+      required: 0
+      description:
+      default_value:
+        - 
+          value: Test Default Value
+      id: 7
+      field_id: 5
+      field_name: field_test_text_field
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Test Text Field Multiple Values
+      widget:
+        weight: 1
+        type: text_textfield
+        module: text
+        active: 1
+        settings:
+          size: 60
+      settings:
+        text_processing: 0
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 12
+      required: 0
+      description:
+      default_value: null
+      id: 8
+      field_id: 6
+      field_name: field_test_text_field_multiple_v
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    modify:
+      tag: field
+      label: Test Term Reference
+      widget:
+        weight: 2
+        type: taxonomy_autocomplete
+        module: taxonomy
+        active: 0
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+      settings:
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: taxonomy_term_reference_link
+          settings: [ ]
+          module: taxonomy
+          weight: 13
+      required: 0
+      description:
+      default_value: null
+      id: 9
+      field_id: 7
+      field_name: field_test_term_reference
+      entity_type: node
+      bundle: article
+      deleted: 0
+instance:
+  - 
+    create:
+      tag: instance
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 1
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_page
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 2
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: page
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Comment
+      settings:
+        text_processing: 1
+        user_register_form: false
+      required: true
+      display:
+        default:
+          label: hidden
+          type: text_default
+          weight: 0
+          settings: [ ]
+          module: text
+      widget:
+        type: text_textarea
+        settings:
+          rows: 5
+        weight: 0
+        module: text
+      description:
+      id: 3
+      field_id: 1
+      field_name: comment_body
+      entity_type: comment
+      bundle: comment_node_article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Body
+      widget:
+        type: text_textarea_with_summary
+        settings:
+          rows: 20
+          summary_rows: 5
+        weight: -4
+        module: text
+      settings:
+        display_summary: true
+        text_processing: 1
+        user_register_form: false
+      display:
+        default:
+          label: hidden
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 0
+        teaser:
+          label: hidden
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 600
+          module: text
+          weight: 0
+      required: false
+      description:
+      id: 4
+      field_id: 2
+      field_name: body
+      entity_type: node
+      bundle: article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Tags
+      description: >
+        Enter a comma-separated list of words to
+        describe your content.
+      widget:
+        type: taxonomy_autocomplete
+        weight: -4
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+        module: taxonomy
+      display:
+        default:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+        teaser:
+          type: taxonomy_term_reference_link
+          weight: 10
+          label: above
+          settings: [ ]
+          module: taxonomy
+      settings:
+        user_register_form: false
+      required: false
+      id: 5
+      field_id: 3
+      field_name: field_tags
+      entity_type: node
+      bundle: article
+      deleted: 0
+      default_value: null
+  - 
+    create:
+      tag: instance
+      label: Image
+      description: Upload an image to go with this article.
+      required: false
+      settings:
+        file_directory: field/image
+        file_extensions: png gif jpg jpeg
+        max_filesize:
+        max_resolution:
+        min_resolution:
+        alt_field: true
+        title_field:
+        default_image: 0
+        user_register_form: false
+      widget:
+        type: image_image
+        settings:
+          progress_indicator: throbber
+          preview_image_style: thumbnail
+        weight: -1
+        module: image
+      display:
+        default:
+          label: hidden
+          type: image
+          settings:
+            image_style: large
+            image_link:
+          weight: -1
+          module: image
+        teaser:
+          label: hidden
+          type: image
+          settings:
+            image_style: medium
+            image_link: content
+          weight: -1
+          module: image
+      id: 6
+      field_id: 4
+      field_name: field_image
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    create:
+      tag: instance
+      label: Test Text Field
+      widget:
+        weight: 0
+        type: text_textfield
+        module: text
+        active: 1
+        settings:
+          size: 60
+      settings:
+        text_processing: 0
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 11
+        teaser:
+          type: hidden
+          label: above
+          settings: [ ]
+          weight: 0
+      required: 0
+      description:
+      default_value:
+        - 
+          value: Test Default Value
+      id: 7
+      field_id: 5
+      field_name: field_test_text_field
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    create:
+      tag: instance
+      label: Test Text Field Multiple Values
+      widget:
+        weight: 1
+        type: text_textfield
+        module: text
+        active: 1
+        settings:
+          size: 60
+      settings:
+        text_processing: 0
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: text_default
+          settings: [ ]
+          module: text
+          weight: 12
+        teaser:
+          type: hidden
+          label: above
+          settings: [ ]
+          weight: 0
+      required: 0
+      description:
+      default_value: null
+      id: 8
+      field_id: 6
+      field_name: field_test_text_field_multiple_v
+      entity_type: node
+      bundle: article
+      deleted: 0
+  - 
+    create:
+      tag: instance
+      label: Test Term Reference
+      widget:
+        weight: 2
+        type: taxonomy_autocomplete
+        module: taxonomy
+        active: 0
+        settings:
+          size: 60
+          autocomplete_path: taxonomy/autocomplete
+      settings:
+        user_register_form: false
+      display:
+        default:
+          label: above
+          type: taxonomy_term_reference_link
+          settings: [ ]
+          module: taxonomy
+          weight: 13
+        teaser:
+          type: hidden
+          label: above
+          settings: [ ]
+          weight: 0
+      required: 0
+      description:
+      default_value: null
+      id: 9
+      field_id: 7
+      field_name: field_test_term_reference
+      entity_type: node
+      bundle: article
+      deleted: 0
