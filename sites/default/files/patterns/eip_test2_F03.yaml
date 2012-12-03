@@ -1,0 +1,139 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - taxonomy
+term:
+  - 
+    modify:
+      tag: term
+      name: Term Tag A
+      description:
+        value: Term Tag A
+        format: filtered_html
+      vocabulary_machine_name: tags
+      parent:
+        - 0
+      weight: 0
+      vid: 1
+      tid: 1
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/1
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term Tag B
+      description:
+        value: Term Tag B
+        format: filtered_html
+      vocabulary_machine_name: tags
+      parent:
+        - 0
+      weight: 0
+      vid: 1
+      tid: 2
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/2
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 1.1
+      description:
+        value: Term 1.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_1
+      parent:
+        - 0
+      weight: 0
+      vid: 2
+      tid: 3
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/3
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 1.2
+      description:
+        value: Term 1.2
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_1
+      parent:
+        - 0
+      weight: 0
+      vid: 2
+      tid: 4
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/4
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1
+      description:
+        value: Term 2.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 0
+      weight: 0
+      vid: 3
+      tid: 5
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/5
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1.1
+      description:
+        value: Term 2.1.1
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 5
+      weight: 0
+      vid: 3
+      tid: 6
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/6
+        language: und
+  - 
+    modify:
+      tag: term
+      name: Term 2.1.2
+      description:
+        value: Term 2.1.2
+        format: filtered_html
+      vocabulary_machine_name: test_vocabulary_2
+      parent:
+        - 5
+      weight: 0
+      vid: 3
+      tid: 7
+      path:
+        alias:
+        pid: null
+        source: taxonomy/term/7
+        language: und

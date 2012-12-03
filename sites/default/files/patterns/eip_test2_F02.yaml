@@ -1,0 +1,45 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - taxonomy
+vocabulary:
+  - 
+    modify:
+      tag: vocabulary
+      name: Tags
+      machine_name: tags
+      old_machine_name: tags
+      description: >
+        Use tags to group articles on similar
+        topics into categories.
+      hierarchy: 0
+      vid: 1
+      module: taxonomy
+  - 
+    modify:
+      tag: vocabulary
+      name: Test Vocabulary 1
+      machine_name: test_vocabulary_1
+      old_machine_name: test_vocabulary_1
+      description: Test Vocabulary 1 Desc
+      hierarchy: 0
+      vid: 2
+      module: taxonomy
+  - 
+    modify:
+      tag: vocabulary
+      name: Test Vocabulary 2
+      machine_name: test_vocabulary_2
+      old_machine_name: test_vocabulary_2
+      description: Test Vocabulary 3
+      hierarchy: 0
+      vid: 3
+      module: taxonomy
