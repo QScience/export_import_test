@@ -1,0 +1,144 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - user
+permission:
+  - 
+    modify:
+      tag: permission
+      rid: 1
+      value:
+        - access backup and migrate
+        - access content
+        - perform backup
+        - use text format filtered_html
+  - 
+    modify:
+      tag: permission
+      rid: 2
+      value:
+        - access backup and migrate
+        - access content
+        - perform backup
+        - use text format filtered_html
+  - 
+    modify:
+      tag: permission
+      rid: 3
+      value:
+        - access administration pages
+        - access backup and migrate
+        - access backup files
+        - access comments
+        - access content
+        - access content overview
+        - access contextual links
+        - access dashboard
+        - access overlay
+        - access site in maintenance mode
+        - access site reports
+        - access toolbar
+        - access user profiles
+        - administer actions
+        - administer backup and migrate
+        - administer blocks
+        - administer comments
+        - administer content types
+        - administer filters
+        - administer image styles
+        - administer menu
+        - administer modules
+        - administer nodes
+        - administer patterns
+        - administer permissions
+        - administer search
+        - administer shortcuts
+        - administer site configuration
+        - administer software updates
+        - administer taxonomy
+        - administer themes
+        - administer url aliases
+        - administer users
+        - block IP addresses
+        - bypass node access
+        - cancel account
+        - change own username
+        - create article content
+        - create page content
+        - create url aliases
+        - customize shortcut links
+        - delete any article content
+        - delete any page content
+        - delete backup files
+        - delete own article content
+        - delete own page content
+        - delete revisions
+        - delete terms in 1
+        - edit any article content
+        - edit any page content
+        - edit own article content
+        - edit own comments
+        - edit own page content
+        - edit terms in 1
+        - get patterns
+        - perform backup
+        - post comments
+        - public patterns
+        - restore from backup
+        - revert revisions
+        - search content
+        - select account cancellation method
+        - skip comment approval
+        - switch shortcut sets
+        - use advanced search
+        - use text format filtered_html
+        - use text format full_html
+        - view own unpublished content
+        - view revisions
+        - view the administration theme
+  - 
+    modify:
+      tag: permission
+      rid: 4
+      value:
+        - create article content
+        - create page content
+        - delete any article content
+        - delete any page content
+        - delete own article content
+        - delete own page content
+        - delete revisions
+        - edit any article content
+        - edit any page content
+        - edit own article content
+        - edit own page content
+        - revert revisions
+        - view own unpublished content
+        - view revisions
+  - 
+    modify:
+      tag: permission
+      rid: 5
+      value:
+        - create article content
+        - create page content
+        - delete any article content
+        - delete any page content
+        - delete own article content
+        - delete own page content
+        - delete revisions
+        - edit any article content
+        - edit any page content
+        - edit own article content
+        - edit own page content
+        - revert revisions
+        - view own unpublished content
+        - view revisions
