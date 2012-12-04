@@ -1,0 +1,195 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - system
+variables:
+  - 
+    create:
+      tag: variables
+      0:
+        name: admin_theme
+        value: seven
+      1:
+        name: backup_migrate_destination_id
+        value: download
+      2:
+        name: backup_migrate_profile_id
+        value: 29be1c97fa89706e41038c960645831e
+      3:
+        name: backup_migrate_source_id
+        value: db
+      4:
+        name: clean_url
+        value: 1
+      5:
+        name: comment_page
+        value: 0
+      6:
+        name: cron_key
+        value: >
+          YH_KJI_ihNCJ6gMxZtk3exbB-8C9GNledWOTIHXHz0w
+      7:
+        name: cron_last
+        value: 1354623091
+      8:
+        name: css_js_query_string
+        value: me8xke
+      9:
+        name: date_default_timezone
+        value: Europe/London
+      10:
+        name: default_nodes_main
+        value: 30
+      11:
+        name: drupal_http_request_fails
+        value:
+      12:
+        name: drupal_private_key
+        value: >
+          UdjDmWG45QRlCY-6409pRn4sFP7Y_CR4xO_cFzh_wlA
+      13:
+        name: file_default_scheme
+        value: public
+      14:
+        name: file_private_path
+        value: sites/default/files/private
+      15:
+        name: file_public_path
+        value: sites/default/files
+      16:
+        name: file_temporary_path
+        value: /tmp
+      17:
+        name: filter_fallback_format
+        value: plain_text
+      18:
+        name: install_profile
+        value: standard
+      19:
+        name: install_task
+        value: done
+      20:
+        name: install_time
+        value: 1349183197
+      21:
+        name: maintenance_mode
+        value:
+      22:
+        name: menu_expanded
+        value: [ ]
+      23:
+        name: menu_masks
+        value:
+          - 501
+          - 493
+          - 250
+          - 247
+          - 246
+          - 245
+          - 127
+          - 125
+          - 123
+          - 122
+          - 121
+          - 117
+          - 63
+          - 62
+          - 61
+          - 60
+          - 59
+          - 58
+          - 44
+          - 31
+          - 30
+          - 29
+          - 28
+          - 24
+          - 21
+          - 15
+          - 14
+          - 13
+          - 11
+          - 7
+          - 6
+          - 5
+          - 3
+          - 2
+          - 1
+      24:
+        name: node_admin_theme
+        value: 1
+      25:
+        name: node_options_page
+        value:
+          - status
+      26:
+        name: node_submitted_page
+        value:
+      27:
+        name: path_alias_whitelist
+        value: [ ]
+      28:
+        name: patterns_first_install
+        value:
+      29:
+        name: patterns_loaded
+        value: 1354623671
+      30:
+        name: site_403
+        value:
+      31:
+        name: site_404
+        value:
+      32:
+        name: site_default_country
+        value: GB
+      33:
+        name: site_frontpage
+        value: node
+      34:
+        name: site_mail
+        value: david.rozas@gmail.com
+      35:
+        name: site_name
+        value: >
+          Export Import Sandbox Modified to be
+          exported
+      36:
+        name: site_slogan
+        value: Just another sandbox... oh yeahª
+      37:
+        name: theme_default
+        value: bartik
+      38:
+        name: update_last_check
+        value: 1354623100
+      39:
+        name: update_notify_emails
+        value:
+          - david.rozas@gmail.com
+      40:
+        name: user_admin_role
+        value: 3
+      41:
+        name: user_pictures
+        value: 1
+      42:
+        name: user_picture_dimensions
+        value: 1024x1024
+      43:
+        name: user_picture_file_size
+        value: 800
+      44:
+        name: user_picture_style
+        value: thumbnail
+      45:
+        name: user_register
+        value: 2
