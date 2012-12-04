@@ -1,0 +1,97 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - shortcut
+shortcut_set:
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Default
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Test Set 1
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Test Set 2
+shortcut_link:
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Default
+      shortcut_link_title: Add content
+      shortcut_link_path: node/add
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Default
+      shortcut_link_title: Find content
+      shortcut_link_path: admin/content
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Default
+      shortcut_link_title: test
+      shortcut_link_path: node
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 1
+      shortcut_link_title: Add content
+      shortcut_link_path: node/add
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 1
+      shortcut_link_title: Find content
+      shortcut_link_path: admin/content
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 1
+      shortcut_link_title: test
+      shortcut_link_path: node
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 1
+      shortcut_link_title: test set A
+      shortcut_link_path: node
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 2
+      shortcut_link_title: Add content
+      shortcut_link_path: node/add
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 2
+      shortcut_link_title: Find content
+      shortcut_link_path: admin/content
+  - 
+    create:
+      tag: shortcut_link
+      shortcut_set_name: Test Set 2
+      shortcut_link_title: Test shortcut b
+      shortcut_link_path: node
+shortcut_set_user:
+  - 
+    modify:
+      tag: shortcut_set_user
+      name: Test Set 1
+      user: user1
+  - 
+    modify:
+      tag: shortcut_set_user
+      name: Test Set 2
+      user: user2

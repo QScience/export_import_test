@@ -1,0 +1,25 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - shortcut
+shortcut_set:
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Default
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Test Set 1
+  - 
+    create:
+      tag: shortcut_set
+      shortcut_set_name: Test Set 2
