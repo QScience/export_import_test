@@ -164,7 +164,7 @@ variables:
           exported
       36:
         name: site_slogan
-        value: Just another sandbox... oh yeahª
+        value: Just another sandbox... oh yeah!
       37:
         name: theme_default
         value: bartik
