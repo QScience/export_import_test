@@ -1,0 +1,20 @@
+---
+info:
+  title: Untitled Pattern
+  category: General
+  description: No description
+  version: 1.0
+  core: x.y
+  author: root
+  author_email: david.rozas@gmail.com
+  author_website: http://localhost
+modules:
+  - toolbar
+toolbarrole:
+  - 
+    modify:
+      tag: toolbarrole
+      addroles:
+        - anonymous user
+      delroles:
+        - authenticated user
